@@ -1,2 +1,3 @@
 # Let's Upgrade
-![](JS-assignment/logo.jpg)
+![letsupgrade](https://github.com/pragadesh-k/JS-assignment/blob/master/logo.jpg)
+*Let's Upgrade essential javascript assignment*
