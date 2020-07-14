@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h3>Dates and Time</h3>
+    <p id="date"></p>
+    <p id="time"></p>
+    <h3>Time Format</h3>
+    <p id="timeformat"></p>
+    <p id = "timeformat2"></p>
+    <script>
+        days = {
+            0 : "Sunday",
+            1 : "Monday",
+            2 : "Tuesday",
+            3 : "Wednesday",
+            4 : "Thursday",
+            5 : "Friday",
+            6 : "Saturday",
+        };
+        var today = new Date();
+        var shift;
+        var month = today.getMonth()+1;
+        var date = today.getDate();
+        var year = today.getFullYear();
+        if (Number(today.getHours()) >= 12) {
+            shift = "PM";
+        } else {
+            shift = "AM";
+        }
+        document.getElementById("date").innerHTML = `Today is : ${days[today.getDay()]}`;
+        document.getElementById("time").innerHTML = `Current Time is : ${today.getHours()} ${shift} : ${today.getMinutes()} : ${today.getSeconds()}`;
+        document.getElementById("timeformat").innerHTML = `${month}-${date}-${year}, ${month}/${date}/${year}`;
+        document.getElementById("timeformat2").innerHTML = `${date}-${month}-${year}, ${date}/${month}/${year}`;
+    </script>
+</body>
+</html>
