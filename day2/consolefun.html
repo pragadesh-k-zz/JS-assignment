@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Different console functions</h1>
+    <ul>
+        <li><i>Check the console via inspect</i></li>
+    </ul>
+</body>
+<script>
+    console.log("console log function");
+    console.assert(1 === 10,"assert will print a warning like this, if the given condition is false else do nothing");
+    console.count("it counts how many time a function is  called with the same  string as a arguments like this-->");
+    console.count("it counts how many time a function is  called with the same  string as a arguments like this-->");
+    console.count("it counts how many time a function is  called with the same  string as a arguments like this-->");
+    console.count("this string is changed so the count is 1-->");
+    console.dir(document.location);  // it shows the properties of an object in an object representation but log() shows in string represntation
+    console.error("This is an error message");
+    console.info("this is info");
+    console.warn("this is warning!");
+    console.trace("traced the file");
+    console.table([ { name: 'foo', age: 10 }, { name: 'bar', age: 20 }]);  //Display in the table format
+    console.time("a"); // starts the timer in the console
+    for (let index = 0; index < 10000; index++) {
+       null;       
+    }
+    console.timeEnd("a"); // end the timer in the console
+    // clear.console()  it clears everything in the console
+</script>
+</html>

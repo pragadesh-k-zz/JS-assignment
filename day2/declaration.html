@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1><i>This explains the brief definition about the declarations using let, var and const.</i></h1>
+    
+</body>
+<script>
+   // The let, var, and const are used for the declaration of the variables and its scope.
+
+   // we cannot reassign the value of the variable which is declared in the const keyword..however we can reassign the value of the object's property even the object is declared in the const
+
+    const x = 10;
+    //x = 30; throws an error {Uncaught TypeError: Assignment to constant variable.}
+    const patient = {
+        name : "raj",
+        age : 20,
+        problem : "corona fever",
+    }
+    console.log(patient);
+    
+    //reassigning property
+    patient.age = 40;
+    console.log(patient); //even its declared in const we can change the value of the property
+
+    // both a and b values are changed globally after calling the function
+    var a = 10;
+    let b = 20;
+    function valueChanger() {
+        a = 100;
+        b = 200;
+        console.log(a,b);
+    }
+    valueChanger()
+    console.log(a,b);
+    
+    //when using an inner function the let statement makes your code clean and clear.
+    function nodeSimplified(){
+        let a =10;
+        console.log(a);  // output 10
+        if(true){
+        let a=20;
+        console.log(a); // output 20
+        }
+        console.log(a);  // output 10
+    }
+    nodeSimplified();
+</script>
+</html>
