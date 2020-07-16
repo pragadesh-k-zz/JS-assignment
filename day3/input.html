@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Get Input from user</title>
+    <style>
+      #but {
+        background-color: darkgrey;
+        color: black;
+        padding: 12px;
+        width: 60px;
+        margin: auto;
+        margin-bottom: 30px;
+        box-shadow: 1px 1px 1px 1px;
+      }
+      #but:active {
+        box-shadow: 0px 0px 0px 0px;
+      }
+      #but:hover {
+        cursor: pointer;
+      }
+    </style>
+  </head>
+  <body style="margin: 0px;">
+    <nav style="background-color: crimson; text-align: center; padding: 10px;">
+      <h1 style="margin: 0px; color: white;" on>Input from user</h1>
+    </nav>
+    <div style="text-align: center; margin-top: 20px;">
+      <p id="but" onclick="input()">Input</p>
+      <p id="messagestart" style="color: gray; font-style: italic;">
+        Click the Input button
+      </p>
+      <i
+        id="name"
+        style="display: block; margin-bottom: 15px; font-size: 50px;"
+      ></i>
+      <p id="message" style="color: gray; font-style: italic;"></p>
+    </div>
+  </body>
+  <script>
+    function input() {
+      let name = prompt("Hey! What's your name?");
+      document.getElementById("messagestart").style.display = "none";
+      if (name !== null) {
+        document.getElementById("message").style.display = "block";
+        document.getElementById("name").innerHTML = `Hello ${name}!!!`;
+        document.getElementById(
+          "message"
+        ).innerHTML = `please check the console too!`;
+        console.log(name);
+      } else {
+        document.getElementById("name").innerHTML =
+          "Give the input and click ok!";
+        document.getElementById("message").style.display = "none";
+      }
+    }
+  </script>
+</html>

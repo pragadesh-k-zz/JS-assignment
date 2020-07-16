@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Age confirmation</title>
+    <style>
+      body {
+        margin: 0px;
+        height: 500px;
+        background-color: rgba(150, 148, 144, 0.2);
+        text-align: center;
+      }
+      .maincontainer {
+        height: 150px;
+        margin: 50px;
+        border-radius: 20px;
+        text-align: center;
+        box-shadow: 5px 5px 5px 5px rgb(70, 70, 70);
+        background-image: url("backg.jpg");
+        background-size: contain;
+      }
+
+      .button {
+        margin: 0px 100px;
+        padding: 10px 30px 10px 30px;
+        background-color: rgba(44, 44, 43, 1);
+        border-radius: 20px;
+        display: inline-block;
+        opacity: 0.9;
+        font-style: italic;
+        color: white;
+      }
+      .button:active {
+        box-shadow: 0px 0px;
+      }
+      .button:hover {
+        cursor: pointer;
+        opacity: 1;
+      }
+      .ques {
+        color: white;
+        font-style: italic;
+        display: inline-block;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="maincontainer">
+      <p class="ques">
+        Are you 21+ ?
+      </p>
+      <div class="butcontainer">
+        <span class="button" onclick="promfun()">Yes</span>
+        <span class="button" onclick="promfun2()">No</span>
+      </div>
+    </div>
+    <p style="color: black; font-style: italic;" id="message"></p>
+  </body>
+  <script>
+    function promfun() {
+      const permission = confirm("Are you sure?");
+      if (permission) {
+        document.getElementById("message").innerHTML =
+          "Please see the console!";
+        console.log("can drink");
+      }
+    }
+    function promfun2() {
+      const permission = confirm("Are you sure?");
+      if (permission) {
+        document.getElementById("message").innerHTML =
+          "Please see the console!";
+        console.log("cannot drink");
+      }
+    }
+  </script>
+</html>
