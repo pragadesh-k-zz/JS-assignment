@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Android Version</title>
+</head>
+<body style="text-align: center;">
+    <h1>Android Version</h1>
+    <p id="ver"></p>
+</body>
+<script>       
+    const input = prompt("OS and version");
+    const versionName = input.split(" ")
+    document.getElementById("ver").innerHTML = `The OS name is ${versionName[0]} and Version is ${versionName[1]}.<p style="font-style:italic;">Check the console too</p>`;
+    console.log(`The OS name is ${versionName[0]} and Version is ${versionName[1]}.`);
+</script>
+</html>

@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mark</title>
+</head>
+<body>
+    <h1>Mark : </h1>
+    <span id='res'></span>
+</body>
+<script>
+    const mark = Number(prompt("enter your mark"));
+    let grade;
+    /*if (mark >= 90) {
+        grade = "A";
+    }
+    else if(mark > 20 && mark < 90 ){
+        grade = "B";
+    }
+    else if(mark >= 0){
+        grade = "F";
+    }
+    else{
+        grade = "Give the number as input";
+    }*/
+    grade = (mark>=90 ? "A": mark>20 && mark<90 ? "B": mark>=0 ? "F" : "Give your mark in number");
+    document.getElementById("res").innerHTML = `Mark are ${mark} and the grade id ${grade}.<p style="font-style:italic;">Check the console too</p>`;
+    console.log(`Mark are ${mark} and the grade id ${grade}.`);
+</script>
+</html>

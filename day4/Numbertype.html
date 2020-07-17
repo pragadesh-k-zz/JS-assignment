@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Number type</title>
+  <style>
+    .mcontainer{
+      background-color: rgba(255, 0, 85, 0.719);
+      width: "50%";
+      height: 200px;
+      margin: auto;
+      border-radius: 10px;
+      box-shadow: 4px 5px;
+      text-align: center;
+    }
+    
+    .one{
+      margin: 40px 40px;      
+    }
+  </style>
+</head>
+<body>
+  <div class="mcontainer">
+    <h3 class="one">Give the number : <button onclick="check()">Input</button></h3>
+    <p class="one" id="user"></p>
+    <h1 class="one" style="font-style:italic;color: #fff;" id="ans"></h1>
+  </div>
+  <p id="see" style="font-style:italic;"></p>`
+</body>
+<script>
+  function check(){
+    let result;
+    const usernum = Number(prompt("Give your number:"));
+    if (Number(usernum%2)===0){
+      result = `${usernum} is an even number`;
+      console.log(result);
+    }else if(usernum%2>0){
+      result = `${usernum} is an odd number`;
+      console.log(result);
+    }else{
+      result = "input is not a number";
+    }
+    document.getElementById("user").innerHTML = `<i>your number is :</i> ${usernum}`;
+    document.getElementById("ans").innerHTML = result;
+    document.getElementById("see").innerHTML = "Check the console too";
+
+  }
+</script>
+</html>
