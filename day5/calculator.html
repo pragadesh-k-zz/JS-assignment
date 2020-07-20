@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>calculator</title>
+</head>
+<body>
+    <h2>calculator</h2>
+</body>
+<script>
+    // calculator 
+    const calculator = {
+        result : 0,
+        add : function(value) {
+            this.result = value + this.result;
+            return `Result is ${this.result}`;
+        },
+        sub : function(value) {
+            this.result = this.result - value ;
+            return `Result is ${this.result}`;
+        },
+        mul : function(value) {
+            this.result = this.result * value ;
+            return `Result is ${this.result}`;
+        },
+        div : function(value) {
+            this.result = this.result / value;
+            return `Result is ${this.result}`;
+        },
+        sqrt : Math.floor(Math.sqrt),
+        clear : function () {
+            this.result = 0;
+            return `Result is ${this.result}`;
+        },
+        equal : function () {
+            return `Result is ${this.result}`;
+        } 
+        
+    }
+    console.log(calculator.equal())
+    console.log(calculator.add(10))
+    console.log(calculator.sub(5))
+</script>
+</html>
