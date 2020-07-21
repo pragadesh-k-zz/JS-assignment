@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>fuctions</title>
+</head>
+<body>
+    <h1>Filter the odd number and generating their cubes</h1>
+</body>
+<script>
+    let number = Number(prompt("Give the positive number",0));
+
+    if (number === 0){
+        console.log(number);
+    } else if (number > 0) {
+        let numarr = [];
+        for (let i = 1; i <= number; i++) {
+            numarr.push(i);            
+        }
+        let oddcubes = numarr.filter(num => num%2 !== 0).map(numcub => numcub ** 3);
+        console.log(oddcubes);
+    } else {
+        console.log("Please give the positive number");
+    }
+</script>
+</html>

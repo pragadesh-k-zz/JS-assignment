@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>login</title>
+</head>
+<body>
+    <h1>login page</h1>
+</body>
+<script>
+    class User{
+        constructor(name,age,email){
+            this.name = name;
+            this.age = age;
+            this.email = email;
+            this.coins = 0;
+            this.courses = []
+        }
+
+        login(){
+            console.log(`${this.name} has logged in`);
+            return this;
+        }
+        
+        logout(){
+            console.log(`${this.name} has logged out`);
+            return this;
+        }
+    }
+    
+    class Moderator extends User{
+
+        addcoins(){
+            this.coins++;
+        }
+
+        removecoins(){
+            this.coins--;
+        }
+
+    }
+    
+    class Admin extends Moderator{
+
+        addcourse(user,coursename){
+            user.courses.push(coursename);
+            return user;
+        }
+
+        removecourse(user,coursename){
+            user.courses.pop(coursename);
+            return user;
+        }
+    }
+
+    let userone = new User("pragi",20,"pragi31@gmail.com");
+    let usertwo = new User("siva",20,"siva3@gmail.com");
+    let users = [userone,usertwo];
+    let add = new Admin();
+    console.log(add.addcourse(userone,"python"));
+    console.log(add.addcourse(usertwo,"java"));
+    console.log(add.removecourse(usertwo,"java"))
+</script>
+</html>

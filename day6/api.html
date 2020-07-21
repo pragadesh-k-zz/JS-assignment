@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>API</title>
+</head>
+<body>
+    <h1>API fetching</h1>
+</body>
+<script>
+    let data = [];
+    for (let number = 0; number < 50; number++) {
+        fetch(`https://jsonplaceholder.typicode.com/todos/${number}`)
+      .then(response => response.json())
+      .then(json => json.completed === true?console.log(json):null)       
+    }
+</script>
+</html>
